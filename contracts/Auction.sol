@@ -5,6 +5,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
+import "hardhat/console.sol";
+
 interface IDemoNFT {
     function mintDemo(uint _tokenId) external;
 

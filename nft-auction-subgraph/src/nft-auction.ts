@@ -1,8 +1,9 @@
+/* eslint-disable node/no-missing-import */
 import {
   AuctionEnded,
   AuctionStarted,
   Bid as BidEvent,
-  Withdraw as WithdrawEvent
+  Withdraw as WithdrawEvent,
 } from "../generated/NFTAuction/NFTAuction";
 import { Auction, Bid, Withdraw } from "../generated/schema";
 

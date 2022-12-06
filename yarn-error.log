@@ -1,0 +1,75 @@
+Arguments: 
+  /Users/josh/.nvm/versions/node/v16.17.0/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js
+
+PATH: 
+  /Users/josh/Library/pnpm:/Users/josh/.pyenv/shims:/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:/Users/josh/.nvm/versions/node/v16.17.0/bin:/opt/homebrew/opt/ruby@2.7/bin:/opt/homebrew/opt/ruby@2.7/bin:/Users/josh/Source Code/google-cloud-sdk/bin:/usr/local/bin:/Users/josh/.bin:/usr/local/sbin:/usr/local/opt/ccache/libexec:/Users/josh/.local/share/solana/install/active_release/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Users/josh/.cargo/bin:/Users/josh/.local/bin:/Users/josh/Library/Android/sdk/tools:/Users/josh/Library/Android/sdk/platform-tools:/usr/local/opt/ccache/libexec:/Users/josh/Engineering/installs/flutter/bin:/Users/josh/.pub-cache/bin:/Users/josh/source_compiled/esp-rainmaker/cli:/Users/josh/Library/Android/sdk/cmdline-tools/latest/bin:/Users/josh/Library/Android/sdk/platform-tools:/Users/josh/.local/bin:/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:/Users/josh/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/josh/Library/Caches/Yarn/v6/npm-ignore-5.2.1-c2b1f76cb999ede1502f3a226a9310fdfe88d46c-integrity/node_modules/ignore/LICENSE-MIT' -> '/Users/josh/Engineering/SvelteKit/hardhat-graph-demo/node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore/LICENSE-MIT'
+
+npm manifest: 
+  {
+    "name": "hardhat-project",
+    "devDependencies": {
+      "@graphprotocol/graph-cli": "^0.33.0",
+      "@graphprotocol/graph-ts": "^0.27.0",
+      "@graphprotocol/hardhat-graph": "https://github.com/graphprotocol/hardhat-graph",
+      "@nomiclabs/hardhat-ethers": "^2.0.6",
+      "@nomiclabs/hardhat-etherscan": "^3.1.0",
+      "@nomiclabs/hardhat-waffle": "^2.0.3",
+      "@openzeppelin/contracts": "^4.6.0",
+      "@typechain/ethers-v5": "^7.2.0",
+      "@typechain/hardhat": "^2.3.1",
+      "@types/chai": "^4.3.1",
+      "@types/mocha": "^9.1.1",
+      "@types/node": "^12.20.55",
+      "@typescript-eslint/eslint-plugin": "^4.33.0",
+      "@typescript-eslint/parser": "^4.33.0",
+      "chai": "^4.3.6",
+      "dotenv": "^10.0.0",
+      "eslint": "^7.32.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-config-standard": "^16.0.3",
+      "eslint-plugin-import": "^2.26.0",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-prettier": "^3.4.1",
+      "eslint-plugin-promise": "^5.2.0",
+      "ethereum-waffle": "^3.4.4",
+      "ethers": "^5.6.8",
+      "hardhat": "^2.9.9",
+      "hardhat-gas-reporter": "^1.0.8",
+      "matchstick-as": "0.5.0",
+      "prettier": "^2.6.2",
+      "prettier-plugin-solidity": "^1.0.0-beta.13",
+      "solhint": "^3.3.7",
+      "solidity-coverage": "^0.7.21",
+      "ts-node": "^10.8.1",
+      "typechain": "^5.2.0",
+      "typescript": "^4.7.3"
+    },
+    "scripts": {
+      "graph-codegen": "cd nft-auction-subgraph && graph codegen",
+      "graph-build": "cd nft-auction-subgraph && graph build",
+      "graph-test": "graph test",
+      "graph-local": "docker-compose up",
+      "graph-local-clean": "docker-compose down -v && docker-compose rm -v && rm -rf data/ipfs data/postgres",
+      "create-local": "graph create --node http://127.0.0.1:8020 nft-auction",
+      "deploy-local": "cd nft-auction-subgraph && graph deploy --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020 nft-auction",
+      "hardhat-local": "hardhat node --hostname 0.0.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

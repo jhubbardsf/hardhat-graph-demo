@@ -56,14 +56,25 @@ describe("startAuction", () => {
       const [signer] = await ethers.getSigners();
       const signedDemo = demo.connect(auctionSigner);
       await signedDemo.mintDemo(2);
+
+      expect(await demo.ownerOf(2)).to.equal(auctionSigner.address);
+
       await signedDemo.transferFrom(auction.address, signer.address, 2);
-
-      const tx = await auction.connect(signer)["startAuction(uint256,uint256)"](2, ethers.utils.parseEther("0.5"));
+      // const tx = await auction["startAuction(uint256,uint256)"](
+      //   2,
+      //   ethers.utils.parseEther("0.5")
+      // );
+      const tx = await auction
+        .connect(signer)
+        ["startAuction(uint256,uint256)"](2, ethers.utils.parseEther("0.5"));
       const receipt = await tx.wait();
-
-      expect(await demo.ownerOf(1)).to.equal(signer.address);
-      expect(receipt.events![0].event).to.equal("AuctionStarted");
-      expect(await demo.ownerOf(1)).to.equal(auction.address);
+      console.log("await demo.ownerOf(2): ", await demo.ownerOf(2));
+      console.log("auctionSigner: ", auctionSigner);
+      console.log("auction.address: ", auction.address);
+      console.log("signer.address: ", signer.address);
+      console.log("receipt.events: ", receipt.events);
+      expect(receipt.events![1].event).to.equal("AuctionStarted");
+      expect(await demo.ownerOf(2)).to.equal(auction.address);
     });
   });
 });

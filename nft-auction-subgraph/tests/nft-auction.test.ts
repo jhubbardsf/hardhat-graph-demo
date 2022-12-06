@@ -95,7 +95,8 @@ describe("Withdraw event", () => {
   });
 
   test("Withdraw should have the correct values", () => {
-    const withdrawId = "0x0000000000000000000000000000000000000001-2-500000000000000000";
+    const withdrawId =
+      "0x0000000000000000000000000000000000000001-2-500000000000000000";
 
     assert.fieldEquals("Withdraw", withdrawId, "token", "2");
     assert.fieldEquals(
